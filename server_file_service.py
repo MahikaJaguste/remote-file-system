@@ -1,27 +1,28 @@
 import os
 from encryption import encrypt
 
-def process_request(crypt_num, payload):
-
-    cmd_num = int(payload[0])
-    payload = payload[1:]
+def process_request(payload):
+    print(payload)
+    cmd_num = payload.split('&!$')[0]
+    print(cmd_num)
+    payload = payload[len(cmd_num)+3:]
     response = ''
 
-    if cmd_num == 1:
+    if cmd_num == 'cwd':
         try:
             response = '0' + os.getcwd()
         except:
             response = '1Exception when getting current working directory'
 
 
-    elif cmd_num == 2:
+    elif cmd_num == 'ls':
         try:
             response = '0' + str(os.listdir())
         except:
             response = '1Exception when listing directory contents'
         
 
-    elif cmd_num == 3:
+    elif cmd_num == 'cd':
         cd_path = payload
         try:
             os.chdir(cd_path)
@@ -30,7 +31,7 @@ def process_request(crypt_num, payload):
             response = '1Exception when changing directory'
     
 
-    elif cmd_num == 4:
+    elif cmd_num == 'dwd':
         dwd_file = payload
         try:
             f = open(dwd_file, "r")
@@ -43,7 +44,7 @@ def process_request(crypt_num, payload):
         except:
             response = '1Exception occurred while opening file'
 
-    elif cmd_num == 5:
+    elif cmd_num == 'upd':
         try:
             (file_name, file_content) = payload.split('&!$')
             file_name = file_name.split('/')[-1]

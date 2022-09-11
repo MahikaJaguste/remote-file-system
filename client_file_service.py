@@ -14,23 +14,23 @@ def main():
     '''))
     
     if cmd_num == 1:
-        payload = '1'
+        payload = 'cwd'
 
     elif cmd_num == 2:
-        payload = '2'
+        payload = 'ls'
 
     elif cmd_num == 3:
-        payload = '3'
+        payload = 'cd' + '&!$'
         cd_path = input('''Enter path to change directory to:''')
         payload += cd_path
     
     elif cmd_num == 4:
-        payload = '4'
+        payload = 'dwd' + '&!$'
         dwd_file = input('''Enter filename to download:''')
         payload += dwd_file
 
     elif cmd_num == 5:
-        payload = '5'
+        payload = 'upd' + '&!$'
         upload_file = input('''Enter filename to upload:''')
         try:
             f = open(upload_file, "r")

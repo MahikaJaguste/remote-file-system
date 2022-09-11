@@ -28,7 +28,7 @@ def server_system():
 
                 if crypt_num > 0 and crypt_num < 4:
                     payload = encrypt(payload, crypt_num, 1)
-                    response = process_request(crypt_num, payload)
+                    response = process_request(payload)
 
                 else:
                     # error message
