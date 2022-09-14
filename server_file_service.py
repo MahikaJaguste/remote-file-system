@@ -1,9 +1,7 @@
 import os
 
 def process_request(payload):
-    print(payload)
     cmd_num = payload.split('&!$')[0]
-    print(cmd_num)
     payload = payload[len(cmd_num)+3:]
     response = ''
 
