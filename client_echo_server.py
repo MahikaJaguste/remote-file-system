@@ -1,5 +1,5 @@
 import socket
-from encryption import encrypt
+from client_encryption import encrypt
 
 def client_system(payload):
     HOST = "127.0.0.1"  # The server's hostname or IP address

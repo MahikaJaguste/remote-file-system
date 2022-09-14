@@ -1,5 +1,5 @@
-from encryption import encrypt
-from echo_client import client_system
+from client_encryption import encrypt
+from client_echo_server import client_system
 
 def main():
 

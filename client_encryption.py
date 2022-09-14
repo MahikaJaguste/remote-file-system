@@ -26,22 +26,3 @@ def encrypt(text, mode, e_d = 0):
 
     else: # plaintext or invalid mode
         return text
-
-
- 
-###### Testing ######
-
-# text = "ATTACKATONCE"
-# print (encrypt(text, 'plaintext'))
-
-# text = "ATTACKATONCE"
-# print (encrypt(text, 'substitute'))
-
-# text = "CVVCEMCVQPEG"
-# print (encrypt(text, 'substitute', 1))
-
-# text = "GeeksforGeeks is good to learn"
-# print (encrypt(text, 'transpose'))
-
-# text = "skeeGrofskeeG si doog ot nrael"
-# print (encrypt(text, 'transpose'))

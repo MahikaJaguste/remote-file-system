@@ -1,5 +1,4 @@
 import os
-from encryption import encrypt
 
 def process_request(payload):
     print(payload)
@@ -59,7 +58,3 @@ def process_request(payload):
         response = '1Invalid command'
 
     return response
-
-# payloads = ['1', '2', '4./client_file_system/client_sample_file.txt', '4server_sample.txt',  '3../', '3../hell']
-# for payload in payloads:
-#     process_request(1, payload)

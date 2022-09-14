@@ -1,5 +1,5 @@
 import socket
-from encryption import encrypt
+from server_encryption import encrypt
 from server_file_service import process_request
 
 def server_system():
