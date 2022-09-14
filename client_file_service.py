@@ -92,7 +92,7 @@ def process_response(cmd_num, answer, response):
             answer = eval(response)
             
         elif cmd_num == 3:
-            answer = 'Directory changed successfully'
+            answer = response
 
         elif cmd_num == 4:
             try:
