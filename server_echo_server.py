@@ -41,4 +41,5 @@ def server_system():
 
                 conn.sendall(bytes(response, 'utf-8'))
 
-server_system()
+while(True):
+    server_system()
